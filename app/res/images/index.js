@@ -4,7 +4,7 @@ const IMAGES ={
         ARROW_LEFT_SELECTED:require('./arrow_left_selected/arrow_left_selected.png'),
         ARROW_RIGHT_UNSELECTED:require('./arrow_right_unselected/arrow_right_unselected.png'),
         ARROW_RIGHT_SELECTED:require('./arrow_right_selected/arrow_right_selected.png'),
-        CALENDAR_RIGHT:require('./calendar_right/calendar_righ.png'),
+        CALENDAR_RIGHT:require('./calendar_right/calendar_right.png'),
         CALENDAR_CROSS:require('./calender_cross/calender_cross.png'),
         JOIN:require('./join/join.png'),
         JOIN_UNSELECTED:require('./join_unselected/join_unselected.png'),

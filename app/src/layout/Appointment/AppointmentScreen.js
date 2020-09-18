@@ -1,15 +1,13 @@
-import React ,{Component} from 'react'
-import {View,Text} from 'react-native'
+import React, {Component} from 'react';
+import {View, Text, SafeAreaView} from 'react-native';
+import Header from '../../component/header/Header';
 
-
-export default class AppointmentScreen extends Component{
-
-
-    render(){
-        return(<View
-        style={{justifyContent:'center',alignItems:'center', flex:1}}
-        >
-                <Text>hello</Text>
-        </View>)
-    }
+export default class AppointmentScreen extends Component {
+  render() {
+    return (
+      <SafeAreaView>
+        <Header />
+      </SafeAreaView>
+    );
+  }
 }
