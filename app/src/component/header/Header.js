@@ -3,6 +3,7 @@ import {View, Image, TouchableOpacity, Text} from 'react-native';
 import styles from './HeaderStyles';
 import IMAGES from '../../../res/images';
 import STRINGS from '../../utils/String';
+
 export default class Header extends Component {
   render() {
     return (
@@ -35,7 +36,10 @@ export default class Header extends Component {
                 style={styles.backButtonImageStyle}></Image>
             </TouchableOpacity>
          </View>
-
+         {/* <Dropdown
+        label='Favorite Fruit'
+        data={[]}
+      /> */}
         </View>
       </View>
     );
