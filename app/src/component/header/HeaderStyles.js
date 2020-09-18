@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {getHeightScale, getWidthScale} from '../../utils/Utils';
+import {fonts, getHeightScale, getWidthScale} from '../../utils/Utils';
 import COLORS from '../../../res/colors/Colors';
 
 const styles = StyleSheet.create({
@@ -34,6 +34,7 @@ const styles = StyleSheet.create({
   titleTextStyle: {
     fontSize: getWidthScale(16),
     color: COLORS.WHITE,
+    fontFamily:fonts.bold
   },
 });
 

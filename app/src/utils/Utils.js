@@ -22,3 +22,15 @@ export function getWidthScale(dimensions) {
   export function getHeightScale(dimensions) {
     return (dimensions / standardHeight) * myHeight;
   }
+
+
+  /**
+   * this const is used to get the font family 
+   */
+  export const fonts = {
+    regular: "OpenSans-Regular",
+    semiBold: "OpenSans-Semibold",
+    bold: "OpenSans-Bold",
+    light: "OpenSans-Light",
+  };
+

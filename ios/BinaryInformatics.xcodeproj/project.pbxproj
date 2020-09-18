@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* BinaryInformaticsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BinaryInformaticsTests.m */; };
+		11A767F025151B6000FF546E /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11A767EC25151B5F00FF546E /* OpenSans-Regular.ttf */; };
+		11A767F125151B6000FF546E /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11A767ED25151B5F00FF546E /* OpenSans-Light.ttf */; };
+		11A767F225151B6000FF546E /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11A767EE25151B6000FF546E /* OpenSans-Bold.ttf */; };
+		11A767F325151B6000FF546E /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 11A767EF25151B6000FF546E /* OpenSans-Semibold.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -44,6 +48,10 @@
 		00E356EE1AD99517003FC87E /* BinaryInformaticsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BinaryInformaticsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* BinaryInformaticsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BinaryInformaticsTests.m; sourceTree = "<group>"; };
+		11A767EC25151B5F00FF546E /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		11A767ED25151B5F00FF546E /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		11A767EE25151B6000FF546E /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		11A767EF25151B6000FF546E /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* BinaryInformatics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BinaryInformatics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = BinaryInformatics/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = BinaryInformatics/AppDelegate.m; sourceTree = "<group>"; };
@@ -161,7 +169,6 @@
 				6C117747DECA9CE6EC543D99 /* Pods-BinaryInformatics-tvOSTests.debug.xcconfig */,
 				588EF66EB0B11F9A2FC52DDD /* Pods-BinaryInformatics-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -175,6 +182,10 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				11A767EE25151B6000FF546E /* OpenSans-Bold.ttf */,
+				11A767ED25151B5F00FF546E /* OpenSans-Light.ttf */,
+				11A767EC25151B5F00FF546E /* OpenSans-Regular.ttf */,
+				11A767EF25151B6000FF546E /* OpenSans-Semibold.ttf */,
 				13B07FAE1A68108700A75B9A /* BinaryInformatics */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* BinaryInformaticsTests */,
@@ -340,6 +351,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11A767F025151B6000FF546E /* OpenSans-Regular.ttf in Resources */,
+				11A767F125151B6000FF546E /* OpenSans-Light.ttf in Resources */,
+				11A767F225151B6000FF546E /* OpenSans-Bold.ttf in Resources */,
+				11A767F325151B6000FF546E /* OpenSans-Semibold.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
