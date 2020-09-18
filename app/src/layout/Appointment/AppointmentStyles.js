@@ -1,12 +1,12 @@
 import {Dimensions, StyleSheet} from 'react-native';
-import {getHeightScale} from '../../utils/Utils';
+import {getHeightScale, getWidthScale} from '../../utils/Utils';
 
 const styles = StyleSheet.create({
   parentView: {
     flex: 1,
   },
 
-  bottomViewStyle: {
+  bottomContainerStyle: {
     height: getHeightScale(100),
     width: '100%',
     position: 'absolute',
@@ -16,5 +16,12 @@ const styles = StyleSheet.create({
     shadowRadius: 12,
     elevation: 2,
   },
+  bottomViewStyle: {
+    justifyContent: 'space-between',
+    height: getHeightScale(100),
+    marginHorizontal: getWidthScale(20),
+    flexDirection: 'row',
+  },
+  patientTextStyle: {alignSelf: 'center'},
 });
 export default styles;
