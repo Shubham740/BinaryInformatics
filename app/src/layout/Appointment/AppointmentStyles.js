@@ -30,6 +30,8 @@ const styles = StyleSheet.create({
     paddingHorizontal: getWidthScale(20),
     color: COLORS.BLACK,
   },
+  buttonContainerStyle:{flexDirection:'row'},
+  
   dateButtonViewStyle: {
     width: '60%',
     margin: getHeightScale(10),

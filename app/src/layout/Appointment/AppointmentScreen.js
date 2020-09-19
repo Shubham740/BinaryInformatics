@@ -7,7 +7,6 @@ import BottomArrow from '../../component/bottomArrow/BottomArrow';
 import IMAGES from '../../../res/images';
 import STRINGS from '../../utils/String';
 import BinaryInfoButton from '../../component/button/BinaryInfoButton';
-import {getHeightScale} from '../../utils/Utils';
 import SimpleToast from 'react-native-simple-toast';
 
 export default class AppointmentScreen extends Component {
@@ -44,7 +43,7 @@ export default class AppointmentScreen extends Component {
   renderButton = () => {
     return (
       <View
-      style={{flexDirection:'row'}}
+      style={styles.buttonContainerStyle}
       >
         <BinaryInfoButton
           containerButton={styles.dateButtonViewStyle}
