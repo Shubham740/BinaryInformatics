@@ -12,7 +12,8 @@ const IMAGES ={
         ONLINE:require('./online/online.png'),
         VIRTUAL_SELECTED:require('./virtual_selected/virtual_selected.png'),
         VIRTUAL_UNSELECTED:require('./virtual_unselected/virtual_unselected.png'),
-        WRITE:require('./write/write.png')
+        WRITE:require('./write/write.png'),
+        ARROW_DOWN:require('./arrow_down/arrow_down.png')
 }
 
 export default IMAGES;

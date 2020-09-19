@@ -4,6 +4,7 @@ const STRINGS={
     COMING_SOON:'Coming soon',
     DATE:'18 April 2019',
     ADD_WALKIN:'Add Walk in',
-    BOOK_APPOINTMENT:'Book Appointment'
+    BOOK_APPOINTMENT:'Book Appointment',
+    SELECTED_FACILITY:'Selected Facility'
 }
 export default STRINGS;

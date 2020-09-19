@@ -87,9 +87,14 @@ export default class AppointmentScreen extends Component {
                       <AppointmentItem
                           appointmentItem={appointmentItem}
                           date={this.state.slotList[0]}
+                          appointItemCallback={this.appointItemCallback}
                       />
                 )
               )}
     </View>)
+  }
+
+  appointItemCallback=()=>{
+    SimpleToast.show(STRINGS.COMING_SOON)
   }
 }

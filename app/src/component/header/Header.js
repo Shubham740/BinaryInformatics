@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
-import {View, Image, TouchableOpacity, Text} from 'react-native';
+import {View, Image, TouchableOpacity, Text,Picker} from 'react-native';
 import styles from './HeaderStyles';
 import IMAGES from '../../../res/images';
 import STRINGS from '../../utils/String';
+import { getWidthScale } from '../../utils/Utils';
 
 export default class Header extends Component {
   render() {
@@ -36,11 +37,26 @@ export default class Header extends Component {
                 style={styles.backButtonImageStyle}></Image>
             </TouchableOpacity>
          </View>
-         {/* <Dropdown
-        label='Favorite Fruit'
-        data={[]}
-      /> */}
+         
         </View>
+        <TouchableOpacity
+          style={styles.datePickerStyle}
+          activeOpacity={0.9}
+          >
+            <Text
+            style={styles.titleDropdownStyle}
+            >{STRINGS.SELECTED_FACILITY}</Text>
+
+          <Image
+            style={[styles.backButtonImageStyle,{marginRight:getWidthScale(10)}]}
+            resizeMode={'contain'}
+            source={IMAGES.ARROW_DOWN}
+           />
+
+
+          </TouchableOpacity>
+           
+
       </View>
     );
   }

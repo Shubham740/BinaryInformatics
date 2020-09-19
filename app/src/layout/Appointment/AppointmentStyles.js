@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     marginTop:getHeightScale(10)
   },
   appointmentListStyle:{
-    marginBottom:getHeightScale(80)
+    marginBottom:getHeightScale(70)
   }
 });
 export default styles;

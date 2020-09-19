@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {Dimensions, StyleSheet} from 'react-native';
 import {fonts, getHeightScale, getWidthScale} from '../../utils/Utils';
 import COLORS from '../../../res/colors/Colors';
 
@@ -34,8 +34,25 @@ const styles = StyleSheet.create({
   titleTextStyle: {
     fontSize: getWidthScale(16),
     color: COLORS.WHITE,
-    fontFamily:fonts.bold
+    fontFamily: fonts.bold,
   },
+
+  datePickerStyle: {
+    height: getHeightScale(40),
+    width: Dimensions.get('window').width-getWidthScale(20),
+    backgroundColor: COLORS.WHITE,
+    borderRadius:getWidthScale(5),
+    marginHorizontal:getWidthScale(10),
+    alignItems:'center',
+    flexDirection:'row',
+    justifyContent:'space-between',
+  },
+  titleDropdownStyle:{
+    fontSize:getWidthScale(16),
+    color:COLORS.LIGHT_GREY,
+    fontFamily:fonts.bold,
+    paddingLeft:getWidthScale(30)
+  }
 });
 
 export default styles;

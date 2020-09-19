@@ -41,14 +41,27 @@ const AppointItem = (props) => {
           </Text>
           {appointmentItem.appointment != null && (
             <View style={styles.joinDeleteViewStyle}>
-              <TouchableOpacity>
+              <TouchableOpacity
+                onPress={()=>{
+                  if(props.appointItemCallback!=null && props.appointItemCallback!=undefined){
+                    props.appointItemCallback()
+                  }
+                }}
+              >
                 <Image
                   style={styles.joinViewImageStyle}
                   resizeMode={'contain'}
-                  source={IMAGES.JOIN}></Image>
+                  source={IMAGES.JOIN}
+                  ></Image>
               </TouchableOpacity>
 
-              <TouchableOpacity>
+              <TouchableOpacity
+               onPress={()=>{
+                if(props.appointItemCallback!=null && props.appointItemCallback!=undefined){
+                  props.appointItemCallback()
+                }
+              }}
+              >
                 <Image
                   style={styles.joinViewImageStyle}
                   resizeMode={'contain'}
@@ -60,14 +73,26 @@ const AppointItem = (props) => {
 
         {appointmentItem.appointment != null && (
           <View style={styles.joinDeleteViewStyle}>
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={()=>{
+                if(props.appointItemCallback!=null && props.appointItemCallback!=undefined){
+                  props.appointItemCallback()
+                }
+              }}
+            >
               <Image
                 style={styles.writeDeleteImageStyle}
                 source={IMAGES.WRITE}
                 resizeMode={'contain'}
               />
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity
+              onPress={()=>{
+                if(props.appointItemCallback!=null && props.appointItemCallback!=undefined){
+                  props.appointItemCallback()
+                }
+              }}
+            >
               <Image
                 style={styles.writeDeleteImageStyle}
                 source={IMAGES.DELETE}
