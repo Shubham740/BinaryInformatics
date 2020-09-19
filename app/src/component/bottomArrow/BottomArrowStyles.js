@@ -3,8 +3,9 @@ import { getHeightScale } from '../../utils/Utils'
 
 const styles=StyleSheet.create({
     imageViewStyle:{
-        width: getHeightScale(50),
-        height:getHeightScale(50),
+        width: getHeightScale(40),
+        height:getHeightScale(40),
+        alignSelf:'center'
     }
 })
 

@@ -1,5 +1,6 @@
 import {Dimensions, StyleSheet} from 'react-native';
-import {getHeightScale, getWidthScale} from '../../utils/Utils';
+import COLORS from '../../../res/colors/Colors';
+import {fonts, getHeightScale, getWidthScale} from '../../utils/Utils';
 
 const styles = StyleSheet.create({
   parentView: {
@@ -7,10 +8,10 @@ const styles = StyleSheet.create({
   },
 
   bottomContainerStyle: {
-    height: getHeightScale(100),
+    height: getHeightScale(70),
     width: '100%',
     position: 'absolute',
-    marginTop: Dimensions.get('window').height - getHeightScale(100),
+    marginTop: Dimensions.get('window').height - getHeightScale(70),
     shadowOffset: {width: 0, height: 2},
     shadowOpacity: 0.5,
     shadowRadius: 12,
@@ -18,10 +19,16 @@ const styles = StyleSheet.create({
   },
   bottomViewStyle: {
     justifyContent: 'space-between',
-    height: getHeightScale(100),
+    height: getHeightScale(70),
     marginHorizontal: getWidthScale(20),
     flexDirection: 'row',
   },
-  patientTextStyle: {alignSelf: 'center'},
+  patientTextStyle: {
+    alignSelf: 'center',
+    fontSize: getWidthScale(10),
+    fontFamily: fonts.bold,
+    paddingHorizontal:getWidthScale(20),
+    color:COLORS.BLACK
+  },
 });
 export default styles;
