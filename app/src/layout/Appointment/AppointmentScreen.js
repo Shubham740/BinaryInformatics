@@ -8,6 +8,7 @@ import IMAGES from '../../../res/images';
 import STRINGS from '../../utils/String';
 import BinaryInfoButton from '../../component/button/BinaryInfoButton';
 import SimpleToast from 'react-native-simple-toast';
+import AppointmentItem from '../../component/appointment/AppointItem';
 
 export default class AppointmentScreen extends Component {
   render() {
@@ -15,7 +16,7 @@ export default class AppointmentScreen extends Component {
       <SafeAreaView style={styles.parentView}>
         <Header />
         {this.renderButton()}
-
+        <AppointmentItem />
         {this.renderBottomView()}
       </SafeAreaView>
     );
@@ -42,9 +43,7 @@ export default class AppointmentScreen extends Component {
 
   renderButton = () => {
     return (
-      <View
-      style={styles.buttonContainerStyle}
-      >
+      <View style={styles.buttonContainerStyle}>
         <BinaryInfoButton
           containerButton={styles.dateButtonViewStyle}
           label={STRINGS.DATE}
@@ -55,7 +54,6 @@ export default class AppointmentScreen extends Component {
           label={STRINGS.ADD_WALKIN}
           callback={this.callback}
         />
-        
       </View>
     );
   };

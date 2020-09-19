@@ -6,6 +6,7 @@ const IMAGES ={
         ARROW_RIGHT_SELECTED:require('./arrow_right_selected/arrow_right_selected.png'),
         CALENDAR_RIGHT:require('./calendar_right/calendar_right.png'),
         CALENDAR_CROSS:require('./calender_cross/calender_cross.png'),
+        DELETE:require('./delete/delete.png'),
         JOIN:require('./join/join.png'),
         JOIN_UNSELECTED:require('./join_unselected/join_unselected.png'),
         ONLINE:require('./online/online.png'),
