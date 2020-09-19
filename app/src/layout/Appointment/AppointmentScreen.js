@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, SafeAreaView} from 'react-native';
+import {View, Text, SafeAreaView,FlatList} from 'react-native';
 import Header from '../../component/header/Header';
 import styles from './AppointmentStyles';
 import Line from '../../component/Line/Line';
@@ -9,14 +9,35 @@ import STRINGS from '../../utils/String';
 import BinaryInfoButton from '../../component/button/BinaryInfoButton';
 import SimpleToast from 'react-native-simple-toast';
 import AppointmentItem from '../../component/appointment/AppointItem';
+import AppointmentJSon from '../../../res/json/appointment.json'
+
 
 export default class AppointmentScreen extends Component {
+
+    constructor(props){
+      super()
+      this.state={
+          appointmentList : AppointmentJSon.slotAppointments
+      }
+    }
+
   render() {
+    console.log('AppointmentScreen+>>>',this.state.appointmentList)
     return (
       <SafeAreaView style={styles.parentView}>
         <Header />
         {this.renderButton()}
-        <AppointmentItem />
+
+        <FlatList
+            style={styles.appointmentListStyle}
+              data={this.state.appointmentList}
+              renderItem={({item, index}) => this.renderListItem(item)}
+              showsVerticalScrollIndicator={false}
+              extraData={this.state.blockList}
+              bounces={false}
+            />
+
+
         {this.renderBottomView()}
       </SafeAreaView>
     );
@@ -57,4 +78,18 @@ export default class AppointmentScreen extends Component {
       </View>
     );
   };
+
+  renderListItem=(item)=>{
+    return(<View>
+          {item.map(
+                (appointmentItem) => (
+                      <AppointmentItem
+                          appointmentItem={appointmentItem}
+                      />
+                )
+              )}
+
+         
+    </View>)
+  }
 }

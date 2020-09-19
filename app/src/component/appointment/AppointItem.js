@@ -1,51 +1,81 @@
 import React from 'react';
-import {Image, Text, View,TouchableOpacity} from 'react-native';
+import {Image, Text, View, TouchableOpacity} from 'react-native';
 import Line from '../Line/Line';
 import styles from './AppointmentItemStyles';
 import IMAGES from '../../../res/images/';
-import STRINGS from '../../utils/String'
+import STRINGS from '../../utils/String';
+import {getPatientName} from '../../utils/Utils';
+import COLORS from '../../../res/colors/Colors';
 const AppointItem = (props) => {
+  let appointmentItem = props.appointmentItem;
+
   return (
     <View>
       <Line />
       <View style={styles.parentView}>
         <Text style={styles.dateTextStyle}>{'10:00 AM '}</Text>
 
-        <View style={styles.appointmentViewStyle}>
+        <View
+          style={[
+            styles.appointmentViewStyle,
+            {
+              borderColor:
+                appointmentItem.appointment != null
+                  ? COLORS.GREY
+                  : COLORS.THEME_COLOR,
+            },
+          ]}>
           <Text
-          style={styles.nameTextStyle}
-          >
-            {STRINGS.BOOK_APPOINTMENT}
+            style={[
+              styles.nameTextStyle,
+              {
+                color:
+                  appointmentItem.appointment != null
+                    ? COLORS.BLACK
+                    : COLORS.THEME_COLOR,
+              },
+            ]}>
+            {appointmentItem.appointment != null
+              ? getPatientName(appointmentItem.appointment.patient)
+              : STRINGS.BOOK_APPOINTMENT}
           </Text>
-          <Image
-          style={styles.joinViewImageStyle}
-          resizeMode={'contain'}
-          source={IMAGES.JOIN}
-          >
+          {appointmentItem.appointment != null && (
+            <View style={styles.joinDeleteViewStyle}>
+              <TouchableOpacity>
+                <Image
+                  style={styles.joinViewImageStyle}
+                  resizeMode={'contain'}
+                  source={IMAGES.JOIN}></Image>
+              </TouchableOpacity>
 
-          </Image>
-          <Image
-          style={styles.joinViewImageStyle}
-          resizeMode={'contain'}
-          source={IMAGES.VIRTUAL_SELECTED}
-          >
-
-          </Image>
-
+              <TouchableOpacity>
+                <Image
+                  style={styles.joinViewImageStyle}
+                  resizeMode={'contain'}
+                  source={IMAGES.VIRTUAL_SELECTED}></Image>
+              </TouchableOpacity>
+            </View>
+          )}
         </View>
-       
 
-        <TouchableOpacity>
-        <Image style={styles.writeDeleteImageStyle} source={IMAGES.WRITE}
-        resizeMode={'contain'}
-        />
-        </TouchableOpacity>
-
-        <TouchableOpacity>
-        <Image style={styles.writeDeleteImageStyle} source={IMAGES.DELETE} 
-        resizeMode={'contain'}
-        />
-        </TouchableOpacity>
+        {appointmentItem.appointment != null && (
+          <View style={styles.joinDeleteViewStyle}>
+            <TouchableOpacity>
+              <Image
+                style={styles.writeDeleteImageStyle}
+                source={IMAGES.WRITE}
+                resizeMode={'contain'}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Image
+                style={styles.writeDeleteImageStyle}
+                source={IMAGES.DELETE}
+                resizeMode={'contain'}
+              />
+            </TouchableOpacity>
+          </View>
+        )}
       </View>
     </View>
   );

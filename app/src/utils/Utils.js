@@ -24,6 +24,24 @@ export function getWidthScale(dimensions) {
   }
 
 
+/**
+ * this method is used to get ther patient namr 
+ * @param {*} patient : it contains the patientObject 
+ */
+  export function getPatientName(patient){
+      
+    let   patientName= ''
+    if(patient.lastName!=null){
+      patientName=     patient.title +' '+patient.firstName+' '+patient.lastName
+
+      }else{
+        patientName= patient.title +' '+patient.firstName
+      }
+      if(patientName.length>17){
+       patientName= patientName.substring(0,14)+'...'
+      }
+        return patientName;
+  }
   /**
    * this const is used to get the font family 
    */

@@ -40,7 +40,8 @@ const styles = StyleSheet.create({
             height:getHeightScale(30),
             alignSelf:'center',
             marginLeft:getWidthScale(10)
-        }
+        },
+        joinDeleteViewStyle:{flexDirection: 'row'}
 })
 
 export default styles;

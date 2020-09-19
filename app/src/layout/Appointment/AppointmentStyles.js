@@ -39,6 +39,9 @@ const styles = StyleSheet.create({
   walkinButtonViewStyle:{
     width: '30%',
     marginTop:getHeightScale(10)
+  },
+  appointmentListStyle:{
+    marginBottom:getHeightScale(80)
   }
 });
 export default styles;
