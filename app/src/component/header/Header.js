@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Image, TouchableOpacity, Text,Picker} from 'react-native';
+import {View, Image, TouchableOpacity, Text,BackHandler} from 'react-native';
 import styles from './HeaderStyles';
 import IMAGES from '../../../res/images';
 import STRINGS from '../../utils/String';
@@ -12,7 +12,11 @@ export default class Header extends Component {
         <View style={styles.titleViewStyle}>
 
           <View style={styles.calendarViewStyle}>
-            <TouchableOpacity style={styles.touchableOpacityStyle}>
+            <TouchableOpacity style={styles.touchableOpacityStyle}
+            onPress={()=>{
+              BackHandler.exitApp()
+            }}
+            >
               <Image
                 source={IMAGES.ARROW}
                 resizeMode={'contain'}

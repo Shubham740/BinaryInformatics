@@ -44,16 +44,15 @@ export function getWidthScale(dimensions) {
   }
 /**
  * this method is used to get the date in formatted manner 
- * @param {*} unformattedDate : it contains the unnformatted date 
+ * @param {*} unformattedDate : it contains the unnformatted date
  */
   export function getDate(unformattedDate) {
     let date = new Date(unformattedDate)
-    var hours = date.getHours();
-    var minutes = date.getMinutes();
-    var ampm = hours >= 12 ? 'PM' : 'AM';
+    let hours = date.getHours();
+    let minutes = '00'
+    let ampm = hours >= 12 ? 'PM' : 'AM';
     hours = hours % 12;
     hours = hours ? hours : 12; 
-    minutes = minutes < 10 ? '0'+minutes : minutes;
     var strTime = hours + ':' + minutes + ' ' + ampm;
     return strTime;
   }
