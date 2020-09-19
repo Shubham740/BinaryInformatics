@@ -4,7 +4,7 @@ import Line from '../Line/Line';
 import styles from './AppointmentItemStyles';
 import IMAGES from '../../../res/images/';
 import STRINGS from '../../utils/String';
-import {getPatientName} from '../../utils/Utils';
+import {getDate, getPatientName} from '../../utils/Utils';
 import COLORS from '../../../res/colors/Colors';
 const AppointItem = (props) => {
   let appointmentItem = props.appointmentItem;
@@ -13,7 +13,7 @@ const AppointItem = (props) => {
     <View>
       <Line />
       <View style={styles.parentView}>
-        <Text style={styles.dateTextStyle}>{'10:00 AM '}</Text>
+        <Text style={styles.dateTextStyle}>{getDate(props.date)}</Text>
 
         <View
           style={[

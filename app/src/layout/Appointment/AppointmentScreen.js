@@ -9,7 +9,7 @@ import STRINGS from '../../utils/String';
 import BinaryInfoButton from '../../component/button/BinaryInfoButton';
 import SimpleToast from 'react-native-simple-toast';
 import AppointmentItem from '../../component/appointment/AppointItem';
-import AppointmentJSon from '../../../res/json/appointment.json'
+import AppointmentJSON from '../../../res/json/appointment.json'
 
 
 export default class AppointmentScreen extends Component {
@@ -17,12 +17,13 @@ export default class AppointmentScreen extends Component {
     constructor(props){
       super()
       this.state={
-          appointmentList : AppointmentJSon.slotAppointments
+          appointmentList : AppointmentJSON.slotAppointments,
+          slotList:AppointmentJSON.dates
       }
     }
 
   render() {
-    console.log('AppointmentScreen+>>>',this.state.appointmentList)
+    console.log('AppointmentScreen+>>>',this.state.slotList)
     return (
       <SafeAreaView style={styles.parentView}>
         <Header />
@@ -85,11 +86,10 @@ export default class AppointmentScreen extends Component {
                 (appointmentItem) => (
                       <AppointmentItem
                           appointmentItem={appointmentItem}
+                          date={this.state.slotList[0]}
                       />
                 )
               )}
-
-         
     </View>)
   }
 }
