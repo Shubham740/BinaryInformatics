@@ -13,8 +13,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     marginTop: Dimensions.get('window').height - getHeightScale(70),
     shadowOffset: {width: 0, height: 2},
-    shadowOpacity: 0.5,
-    shadowRadius: 12,
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
     elevation: 2,
   },
   bottomViewStyle: {
@@ -27,8 +27,16 @@ const styles = StyleSheet.create({
     alignSelf: 'center',
     fontSize: getWidthScale(10),
     fontFamily: fonts.bold,
-    paddingHorizontal:getWidthScale(20),
-    color:COLORS.BLACK
+    paddingHorizontal: getWidthScale(20),
+    color: COLORS.BLACK,
   },
+  dateButtonViewStyle: {
+    width: '60%',
+    margin: getHeightScale(10),
+  },
+  walkinButtonViewStyle:{
+    width: '30%',
+    marginTop:getHeightScale(10)
+  }
 });
 export default styles;

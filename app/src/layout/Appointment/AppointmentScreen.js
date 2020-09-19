@@ -6,12 +6,17 @@ import Line from '../../component/Line/Line';
 import BottomArrow from '../../component/bottomArrow/BottomArrow';
 import IMAGES from '../../../res/images';
 import STRINGS from '../../utils/String';
+import BinaryInfoButton from '../../component/button/BinaryInfoButton';
+import {getHeightScale} from '../../utils/Utils';
+import SimpleToast from 'react-native-simple-toast';
 
 export default class AppointmentScreen extends Component {
   render() {
     return (
       <SafeAreaView style={styles.parentView}>
         <Header />
+        {this.renderButton()}
+
         {this.renderBottomView()}
       </SafeAreaView>
     );
@@ -28,6 +33,30 @@ export default class AppointmentScreen extends Component {
           <BottomArrow image={IMAGES.ARROW_RIGHT_SELECTED} />
           <BottomArrow image={IMAGES.ARROW_RIGHT_UNSELECTED} />
         </View>
+      </View>
+    );
+  };
+
+  callback = () => {
+    SimpleToast.show(STRINGS.COMING_SOON);
+  };
+
+  renderButton = () => {
+    return (
+      <View
+      style={{flexDirection:'row'}}
+      >
+        <BinaryInfoButton
+          containerButton={styles.dateButtonViewStyle}
+          label={STRINGS.DATE}
+          callback={this.callback}
+        />
+        <BinaryInfoButton
+          containerButton={styles.walkinButtonViewStyle}
+          label={STRINGS.ADD_WALKIN}
+          callback={this.callback}
+        />
+        
       </View>
     );
   };
